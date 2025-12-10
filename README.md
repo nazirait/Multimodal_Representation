@@ -14,3 +14,6 @@ The following datasets are used for this thesis:
   2. FashionAI dataset  --> Text and Image Modalities
   3. Movielens --> Text and Graph Modalities
   4. Visual Genome --> Text, Image and Graph Modalities
+
+
+For further information contact via email. 
