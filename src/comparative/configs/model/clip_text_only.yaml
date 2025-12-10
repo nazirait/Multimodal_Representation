@@ -1,0 +1,14 @@
+# src/comparative/configs/model/clip_text_only.yaml
+_target_: comparative.models.transformers.clip_module.CLIPTextOnlyClassifier
+lr: 5e-5
+weight_decay: 0.01
+eps: 1e-8
+max_steps: 10000
+text_encoder_name: openai/clip-vit-base-patch16
+classifier_hidden: 512
+
+# BINARY CE 
+num_labels: 2
+multilabel: false
+
+freeze_text: false

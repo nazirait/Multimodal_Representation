@@ -1,0 +1,16 @@
+# src/comparative/configs/data/visualgenome.yaml
+
+_target_: comparative.datasets.visualgenome_datamodule.VisualGenomeDataModule
+
+# preprocessed JSONL
+data_path: data/processed/visualgenome/visualgenome_dataset.jsonl
+
+batch_size: 32
+num_workers: 4
+image_size: 224
+
+# label vocabulary control
+min_label_freq: 5        # drop very rare object labels
+max_num_labels: 500      # or null to keep all above freq
+
+pin_memory: true

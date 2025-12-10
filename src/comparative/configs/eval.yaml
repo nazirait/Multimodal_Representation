@@ -1,0 +1,14 @@
+# src/comparative/configs/eval.yaml
+metrics:
+  - accuracy
+  - precision
+  - recall
+  - f1
+  - retrieval_at_k: [1, 5, 10]
+  - silhouette
+  - umap
+  - confusion_matrix
+
+# additional evaluation settings 
+save_attention_maps: true
+save_umap_plots: true

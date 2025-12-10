@@ -1,0 +1,19 @@
+# src/comparative/configs/model/classical_late_full.yaml
+_target_: comparative.models.classical.late_fusion.LateFusionClassifier
+
+text_model_name: distilbert-base-uncased
+image_model_name: resnet18
+
+n_classes: 20          # class count
+use_text: true
+use_image: false
+use_graph: false       # no graph embeddings yet
+use_tabular: true      # enable genome vectors
+
+image_emb_dim: null
+graph_emb_dim: null
+tabular_dim: 1129      # MovieLens genome vector dimension
+
+fusion_hidden: 256
+lr: 2.0e-5
+wd: 0.01

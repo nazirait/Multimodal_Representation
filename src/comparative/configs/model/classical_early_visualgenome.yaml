@@ -1,0 +1,20 @@
+# src/comparative/configs/model/classical_early_visualgenome.yaml
+
+_target_: comparative.models.classical.early_fusion.EarlyFusionClassifier
+
+model_name: distilbert-base-uncased
+
+# must match VisualGenomeDataModule label dim (max_num_labels)
+n_classes: 500
+
+fusion_hidden: 256
+lr: 2.0e-5
+wd: 0.01
+
+image_emb_dim: null
+graph_emb_dim: 50
+tabular_dim: null
+
+use_image_cnn: true
+image_model: resnet18
+freeze_image_cnn: true

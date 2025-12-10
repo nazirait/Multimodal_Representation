@@ -1,0 +1,14 @@
+# src/comparative/configs/data/fashionai.yaml
+_target_: comparative.datasets.fashion_datamodule.FashionDatamodule
+
+data_dir: ${oc.env:PROJECT_ROOT}/data/processed/fashion/
+tokenizer_name: distilbert-base-uncased
+
+batch_size: 32
+max_len: 128
+img_size: 224
+num_workers: 12
+
+# Optional caps for debugging / speed. You can override from CLI.
+train_samples: null
+val_samples: null

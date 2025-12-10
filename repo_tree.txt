@@ -1,0 +1,101 @@
+Folder PATH listing for volume Extreme SSD
+Volume serial number is D88E-36DD
+D:.
++---data
+|   +---raw
+|   |   +---fashion
+|   |   +---movielens
+|   |   +---amazon
+|   |   \---visualgenome
+|   \---processed
+|       +---amazon
+|       +---fashion
+|       +---movielens
+|       \---visualgenome
++---scripts
++---src
+|   \---comparative
+|       +---configs
+|       |   +---model
+|       |   +---data
+|       |   \---train
+|       +---datasets
+|       +---models
+|       |   +---classical
+|       |   +---transformers
+|       |   \---vae
+|       +---training
+|       +---evaluation
+|       +---utils
+|       \---checkpoints
+|           +---lightning_logs
+|           |   +---amazon_classical_early
+|           |   |   \---version_0
+|           |   +---amazon_classical_late
+|           |   |   \---version_0
+|           |   +---fashion_classical_early
+|           |   |   \---version_0
+|           |   +---fashion_classical_late
+|           |   |   \---version_1
+|           |   +---movielens_classical_early
+|           |   |   +---version_0
+|           |   |   \---version_1
+|           |   +---movielens_classical_late
+|           |   |   \---version_0
+|           |   +---amazon_clip
+|           |   +---fashion_clip
+|           |   |   +---version_1
+|           |   |   +---version_0
+|           |   |   \---version_2
+|           |   +---movielens_clip
+|           |   |   +---version_1
+|           |   |   \---version_0
+|           |   +---movielens_vilbert
+|           |   |   \---version_0
+|           |   +---amazon_hybrid_mvae
+|           |   |   \---version_0
+|           |   +---fashion_hybrid
+|           |   |   \---version_0
+|           |   +---movielens_mvae
+|           |   |   \---version_0
+|           |   +---visualgenome_classical_early
+|           |   |   \---version_0
+|           |   +---visualgenome_classical_late
+|           |   |   \---version_0
+|           |   +---visualgenome_clip
+|           |   |   \---version_0
+|           |   +---visualgenome_mvae
+|           |   |   \---version_0
+|           |   +---visualgenome_vilbert
+|           |   |   \---version_0
+|           |   \---fashion_vilbert
+|           |       \---version_0
+|           \---default
+|               +---amazon_classical_early
+|               +---amazon_classical_late
+|               +---fashionai_classical_early
+|               +---fashionai_classical_late
+|               +---movielens_classical_early
+|               +---movielens_classical_late
+|               +---amazon_clip
+|               +---fashionai_clip
+|               +---fashionai_vilbert
+|               +---movielens_clip
+|               +---movielens_vilbert 
+|               +---amazon_hybrid_mvae
+|               +---fashion_hybrid
+|               +---movielens_mvae
+|               +---visualgenome_classical_early
+|               +---visualgenome_classical_late
+|               +---visualgenome_clip
+|               +---visualgenome_mvae
+|               \---visualgenome_vilbert
++---. github
+|   \---workflows
++---notebooks
+\---results
+    +---amazon
+    +---fashion
+    \---movielens
+
+# tree /A > repo_tree.txt

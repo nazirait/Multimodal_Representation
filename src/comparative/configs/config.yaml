@@ -1,0 +1,13 @@
+# src/comparative/configs/config.yaml
+defaults:
+  - data: amazon       # amazon, fashion, movielens, visualgenome
+  - model: classical_early   # classical_early, classical_late, clip, vilbert, mvae
+  - train: cpu         # cpu_debug, gpu, cpu_ddp
+  - hardware
+  - override hydra/job_logging: disabled
+  - _self_
+
+seed: 42 # Global seed for reproducibility
+
+# dir to save checkpoints/results/logs
+output_dir: ${oc.env:PROJECT_ROOT}/results/${data}

@@ -1,0 +1,6 @@
+# src/comparative/configs/hardware.yaml
+# Hardware-specific settings (for DataLoader, etc.)
+
+num_workers: 12   # k
+pin_memory: false  # false for CPU, or TRUE
+prefetch_factor: 2

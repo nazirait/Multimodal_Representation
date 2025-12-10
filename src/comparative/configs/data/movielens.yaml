@@ -1,0 +1,22 @@
+# src/comparative/configs/data/movielens.yaml
+_target_: comparative.datasets.movielens_datamodule.MovieLensDataModule
+
+data_dir: ${oc.env:PROJECT_ROOT}/data/processed/movielens
+batch_size: 64          
+max_len: 128
+model_name: distilbert-base-uncased
+num_workers: 12
+
+# balanced subsampling (used in CLIP setup)
+limit_train_samples: 300000
+limit_val_samples: 60000
+balance_by_genre: true
+seed: 42
+
+# enable genome vectors for MVAE side modality
+use_genome_vectors: true
+genome_vectors_path: ${oc.env:PROJECT_ROOT}/data/processed/movielens/movie_genome_vectors.csv
+
+# optional graph embeddings (off for now)
+use_movie_graph_emb: false
+movie_graph_emb_path:

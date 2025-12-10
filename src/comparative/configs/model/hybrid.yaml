@@ -1,0 +1,26 @@
+# src/comparative/configs/model/hybrid.yaml
+_target_: comparative.models.vae.hybrid_module.HybridVAEClassifier
+
+# backbone
+text_encoder_name: distilbert-base-uncased
+
+# MovieLens: 20 genres, multi-label
+num_labels: 20
+multilabel: true
+
+# latent + side modality
+latent_dim: 128
+side_dim: 1129        # genome vector dimension
+
+# training hyperparams
+lr: 3e-4
+weight_decay: 0.01
+eps: 1e-8
+max_steps: 10000
+
+# regularization
+beta_kl: 1.0e-3
+beta_recon: 1.0
+
+dropout: 0.1
+freeze_text: false

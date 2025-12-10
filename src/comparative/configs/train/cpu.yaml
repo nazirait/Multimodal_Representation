@@ -1,0 +1,15 @@
+# src/comparative/configs/train/cpu.yaml
+_target_: pytorch_lightning.Trainer
+
+accelerator: cpu
+devices: 1                       # Single process (not DDP)
+max_epochs: 15
+log_every_n_steps: 5
+
+# Where checkpoints and logs go (overridden in code if needed)
+default_root_dir: D:/COmparative_Study_of_Multimodal_Represenations/src/comparative/checkpoints/
+
+
+
+
+

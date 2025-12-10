@@ -1,0 +1,24 @@
+# src/comparative/configs/model/classical_late_visualgenome.yaml
+
+_target_: comparative.models.classical.late_fusion.LateFusionClassifier
+
+model_name: distilbert-base-uncased
+n_classes: 500
+
+lr: 2.0e-5
+wd: 0.01
+
+# image branch (same as early fusion)
+use_image_cnn: true
+image_model: resnet18
+freeze_image_cnn: true
+
+# graph modality: must match graph-top-k used in preprocessing
+graph_emb_dim: 50
+
+# branch hidden sizes
+text_hidden: 256
+image_hidden: 256
+graph_hidden: 128
+
+max_text_length: 64

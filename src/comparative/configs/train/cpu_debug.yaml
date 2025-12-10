@@ -1,0 +1,12 @@
+# src/comparative/configs/train/cpu_debug.yaml
+_target_: pytorch_lightning.Trainer
+
+accelerator: cpu
+devices: 1
+max_epochs: 1
+limit_train_batches: 30
+limit_val_batches: 10
+log_every_n_steps: 5
+
+default_root_dir: D:/COmparative_Study_of_Multimodal_Represenations/src/comparative/checkpoints/
+

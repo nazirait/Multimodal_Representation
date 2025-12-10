@@ -1,0 +1,24 @@
+# Ignore raw + processed data
+data/raw/
+data/processed/
+
+# Ignore checkpoints, logs
+src/comparative/checkpoints/
+**/lightning_logs/
+results/
+outputs/
+backup/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor files
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Jupyter notebook metadata caches (optional)
+.ipynb_checkpoints/

@@ -1,0 +1,25 @@
+# src/comparative/configs/model/vilbert_embed.yaml
+
+_target_: comparative.models.transformers.vilbert_embed_module.ViLBERTEmbedClassifier
+
+# backbone
+text_encoder_name: distilbert-base-uncased
+
+# classification head
+num_labels: 138          # default (Fashion), override to 20 for MovieLens
+multilabel: false        # default, override to true for MovieLens
+
+# second modality embedding dimension
+# Fashion: 512 (CLIP image_emb)
+# MovieLens: 1129 (genome vectors)
+img_emb_dim: 512
+
+# architecture / training hyperparams
+lr: 3.0e-5
+weight_decay: 0.01
+max_len: 128
+num_xattn_layers: 2
+dropout: 0.1
+freeze_text: false
+
+# fashion, movie

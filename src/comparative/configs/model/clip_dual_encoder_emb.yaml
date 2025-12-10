@@ -1,0 +1,19 @@
+# src/comparative/configs/model/clip_dual_encoder_emb.yaml
+_target_: comparative.models.transformers.clip_emb_module.CLIPDualEncoderFromEmbeds
+
+lr: 1.0e-4
+weight_decay: 0.01
+eps: 1.0e-8
+max_steps: 10000
+
+text_encoder_name: openai/clip-vit-base-patch16
+freeze_text: false
+
+temperature_init: 0.07
+temperature_min: 0.01
+temperature_max: 0.2
+
+# default; override on CLI per-dataset
+image_emb_dim: 512
+
+# for fashion, movie lens

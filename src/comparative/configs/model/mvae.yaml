@@ -1,0 +1,27 @@
+# src/comparative/configs/model/mvae.yaml
+
+_target_: comparative.models.vae.mvae_module.MVAEClassifier
+
+# text encoder
+text_encoder_name: distilbert-base-uncased
+
+# MovieLens genres
+num_labels: 20
+multilabel: true
+
+# latent + side dims
+latent_dim: 128
+side_dim: 1129      # genome vectors only; adjust if you also concat graph embeddings
+
+# optimization
+lr: 0.0003
+weight_decay: 0.01
+eps: 1e-8
+max_steps: 100000
+
+# VAE trade-offs
+beta_kl: 0.001
+beta_side_recon: 1.0
+
+dropout: 0.1
+freeze_text: false
