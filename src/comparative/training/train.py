@@ -11,7 +11,7 @@ from comparative.utils.seed import seed_everything
 
 @hydra.main(config_path="D:/COmparative_Study_of_Multimodal_Represenations/src/comparative/configs", config_name="config", version_base=None)
 def main(cfg: DictConfig) -> None:
-    rprint("[bold green]Hydra config resolved:[/]")
+    rprint("Hydra config resolved:[/]")
     rprint(OmegaConf.to_yaml(cfg, resolve=True, sort_keys=False))
 
     # Set global seed for reproducibility
@@ -29,7 +29,7 @@ def main(cfg: DictConfig) -> None:
         cfg.train,
         callbacks=basic_callbacks(cfg),
     )
-    rprint(f"[cyan]Using Trainer => {trainer.accelerator} | devices={trainer.num_devices} | precision={trainer.precision}[/]")
+    rprint(f"Using Trainer => {trainer.accelerator} | devices={trainer.num_devices} | precision={trainer.precision}[/]")
 
     trainer.fit(model, datamodule=datamodule)
 
