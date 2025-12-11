@@ -1,6 +1,6 @@
 # Comparative Study of Multimodal Representations
 
-This repository contains the code, data processing pipelines, experiments, and analysis for a Master's thesis on multimodal representation learning. The work compares a range of fusion strategies and model families across multiple multimodal datasets and evaluates their effectiveness for retrieval, recommendation and representation analysis.
+This repository contains the code, data processing pipelines, experiments, and analysis for a MSc thesis on multimodal representation learning. The work compares a range of fusion strategies and model families across multiple datasets and evaluates their effectiveness for retrieval, recommendation and representation analysis.
 
 **Note:** This project is part of the author's Master's thesis (repository owner: `nazirait`). If you use this work, please cite the thesis and refer to `CITATION.cff` for citation metadata.
 
