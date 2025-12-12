@@ -1,12 +1,6 @@
-# Comparative Study of Multimodal Representations
+## Comparative Study of Multimodal Representations
 
-This repository contains the source code developed as part of the MSc thesis:
-
-Title: Comparative Study of Multimodal Representations 
-
-Faculty: Faculty of Mathematics and Information Science
-
-Institution: Warsaw University of Technology
+This repository contains the source code developed as part of the MSc thesis "Comparative Study of Multimodal Representations” at the Faculty of Mathematics and Information Science @ Warsaw University of Technology.
 
 Author: Nazira Tukeyeva
 
