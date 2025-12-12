@@ -3,10 +3,13 @@
 This repository contains the source code developed as part of the MSc thesis:
 
 Title: Comparative Study of Multimodal Representations 
+
 Faculty: Faculty of Mathematics and Information Science
+
 Institution: Warsaw University of Technology
 
 Author: Nazira Tukeyeva
+
 Supervisor: dr. inź. Anna Wróblewska
 
 ---
