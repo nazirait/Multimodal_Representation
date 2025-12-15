@@ -6,10 +6,17 @@ import pandas as pd
 from pathlib import Path
 from tqdm import tqdm
 import numpy as np
+import sys
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.append(str(PROJECT_ROOT))
 
+from src.comparative.utils.paths import DATA_PROCESSED
+PROCESSED = DATA_PROCESSED / 'fashion'
 # Paths
-PROCESSED = Path('D:/COmparative_Study_of_Multimodal_Represenations/data/processed/fashion')
-SPLITS = ['train', 'val', 'test']  # Add/remove as needed
+# PROCESSED = Path('D:/COmparative_Study_of_Multimodal_Represenations/data/processed/fashion')
+SPLITS = ['train', 'val', 'test']  
+
+# PROCESSED.mkdir(parents=True, exist_ok=True) # 
 
 # Image transform
 transform = T.Compose([

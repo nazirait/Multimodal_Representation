@@ -1,14 +1,29 @@
 # src/comparative/training/callbacks.py
-
 import pytorch_lightning as pl
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]  
+sys.path.insert(0, str(PROJECT_ROOT))
+
+
+from src.comparative.utils.paths import CHECKPOINTS
 
 def basic_callbacks(cfg=None):
     callbacks = []
 
-    # Save best and last model (per metric, per run)
+    model_name = (
+        cfg.model.name
+        if cfg is not None and hasattr(cfg, "model") and hasattr(cfg.model, "name")
+        else "default"
+    )
+
+    checkpoint_dir = CHECKPOINTS / model_name
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+
     checkpoint_cb = ModelCheckpoint(
-        dirpath=f"D:/COmparative_Study_of_Multimodal_Represenations/src/comparative/checkpoints/{cfg.model.name if cfg and hasattr(cfg.model, 'name') else 'default'}/",
+        dirpath= str(checkpoint_dir),
         save_top_k=1,
         monitor="val_loss",
         mode="min",

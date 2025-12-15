@@ -5,11 +5,20 @@ import hydra
 from omegaconf import DictConfig, OmegaConf
 from rich import print as rprint
 import pytorch_lightning as pl
+#--- upd
+from pathlib import Path
+import sys
+PROJECT_ROOT = Path(__file__).resolve().parents[2] # 1   
+sys.path.insert(0, str(PROJECT_ROOT))
 
+
+from src.comparative.utils.paths import CHECKPOINTS
+#---
 from comparative.training.callbacks import basic_callbacks
 from comparative.utils.seed import seed_everything
+#@hydra.main(config_path="D:/COmparative_Study_of_Multimodal_Represenations/src/comparative/configs", config_name="config", version_base=None)
 
-@hydra.main(config_path="D:/COmparative_Study_of_Multimodal_Represenations/src/comparative/configs", config_name="config", version_base=None)
+@hydra.main(config_path="../configs", config_name="config", version_base=None)
 def main(cfg: DictConfig) -> None:
     rprint("Hydra config resolved:[/]")
     rprint(OmegaConf.to_yaml(cfg, resolve=True, sort_keys=False))

@@ -1,8 +1,15 @@
+# temp, split
 import pandas as pd
 from pathlib import Path
 from sklearn.model_selection import train_test_split
+import sys
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.append(str(PROJECT_ROOT))
 
-PROCESSED = Path('D:/COmparative_Study_of_Multimodal_Represenations/data/processed/fashion')
+from src.comparative.utils.paths import DATA_PROCESSED
+
+PROCESSED = DATA_PROCESSED / 'fashion'
+# PROCESSED = Path('D:/COmparative_Study_of_Multimodal_Represenations/data/processed/fashion')
 
 df = pd.read_csv(PROCESSED / 'train.csv')
 

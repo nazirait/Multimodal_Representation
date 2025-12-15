@@ -1,9 +1,18 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
+import sys
 
-RAW = Path('D:/COmparative_Study_of_Multimodal_Represenations/data/raw/movielens')
-PROCESSED = Path('D:/COmparative_Study_of_Multimodal_Represenations/data/processed/movielens')
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.append(str(PROJECT_ROOT))
+
+from src.comparative.utils.paths import DATA_RAW, DATA_PROCESSED
+
+RAW = DATA_RAW / 'movielens'
+PROCESSED = DATA_PROCESSED / 'movielens'
+
+# RAW = Path('D:/COmparative_Study_of_Multimodal_Represenations/data/raw/movielens')
+# PROCESSED = Path('D:/COmparative_Study_of_Multimodal_Represenations/data/processed/movielens')
 PROCESSED.mkdir(parents=True, exist_ok=True)
 
 # Load data 

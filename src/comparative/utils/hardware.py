@@ -46,7 +46,7 @@ def init_ddp(backend=None, timeout=1800):
         timeout=timedelta(seconds=timeout)
     )
     rprint(
-        f"[bold green]DDP initialized[/] (rank {dist.get_rank()}/{world_size}, backend {chosen_backend})"
+        f"DDP initialized[/] (rank {dist.get_rank()}/{world_size}, backend {chosen_backend})"
     )
 
 def cleanup_ddp():
