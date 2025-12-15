@@ -1,7 +1,11 @@
-# Comparative Study of Multimodal Representations
+## Comparative Study of Multimodal Representations
 
-This repository contains the code, data processing pipelines, experiments, and analysis for a MSc thesis on multimodal representation learning. The work compares a range of fusion strategies and model families across multiple datasets and evaluates their effectiveness for retrieval, recommendation and representation analysis.
+This repository contains the source code developed as part of the **MSc thesis** "Comparative Study of Multimodal Representations” at the **Faculty of Mathematics and Information Science** @ Warsaw University of Technology.
+
+Author: **Nazira Tukeyeva**
+
+Supervisor: **dr. inź. Anna Wróblewska**
 
 ---
 
-Last updated: December 10, 2025
+Last updated: December 12, 2025
