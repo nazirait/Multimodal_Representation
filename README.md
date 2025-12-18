@@ -4,7 +4,7 @@ This repository contains the source code developed as part of the **MSc thesis**
 
 Author: **Nazira Tukeyeva**
 
-Supervisor: **dr. inź. Anna Wróblewska**
+Supervisor: **dr inż. Anna Wróblewska**
 
 ---
 
